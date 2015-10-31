@@ -1,0 +1,18 @@
+# Google Chrome/Chromium theming (requires 9.0.597 or newer)
+style "chrome-gtk-frame" = "theme-default" {
+
+    ChromeGtkFrame::frame-color	= @text_color
+    ChromeGtkFrame::inactive-frame-color = @text_color
+    ChromeGtkFrame::incognito-frame-color = @text_color
+    ChromeGtkFrame::incognito-inactive-frame-color = @text_color
+
+    ChromeGtkFrame::frame-gradient-size		= 0
+    ChromeGtkFrame::frame-gradient-color		= @text_color
+    ChromeGtkFrame::inactive-frame-gradient-color	= @text_color
+
+    ChromeGtkFrame::scrollbar-trough-color 	= @base_color
+    ChromeGtkFrame::scrollbar-slider-normal-color 		= shade(0.92, @bg_color)
+    ChromeGtkFrame::scrollbar-slider-prelight-color 	= @bg_color
+}
+
+class "ChromeGtkFrame" style "chrome-gtk-frame"
